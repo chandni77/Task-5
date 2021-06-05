@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Moonlight Kitchens Order Page</title>
+</head>
+<style>
+    @media (min-width: 650px) { 
+        .sidebox{
+            position: fixed;
+        }
+     }
+</style>
+<body>
+
+
+    <!--Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+        <a class="navbar-brand" href="#">
+            <img src="download.jfif" width="60" height="50" alt="">
+        </a>
+        <a class="navbar-brand" href="#">Moonlight Kitchens</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="main.html#services">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+
+            </ul>
+
+            <button type="button" class="btn btn-danger btn-lg mr-3 ">Order Now</button>
+            <button type="button" class="btn btn-success mr-3 " data-toggle="modal" data-target="#SigninModal">Sign
+                In</button>
+            <button type="button" class="btn btn-warning my-3" data-toggle="modal" data-target="#SignupModal">Sign
+                Up</button>
+        </div>
+    </nav>
+
+
+    <!--Sign In Modal -->
+    <div class="modal fade" id="SigninModal" tabindex="-1" role="dialog" aria-labelledby="SigninModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SigninModalLabel">Sign In to your acoount</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sign Up Modal -->
+    <div class="modal fade" id="SignupModal" tabindex="-1" role="dialog" aria-labelledby="SignupModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SignupModalLabel">Register your account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="exampleInputName">Name</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="NameHelp"
+                            placeholder="Enter name">
+
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="cexampleInputPassword1">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Heading-->
+    <div class=" text-center text-danger mb-5" style="font-size: 3em;">Select your Meal!!</div>
+
+
+    <!--Grid-->
+    <div class="row mx-1">
+        <div class="col col-md-2 align-center">
+            <div class="btn-group-vertical my-4 sidebox">
+                <a class="btn btn-outline-danger btn-lg" href="#1" role="button">OFFERS</a>
+                <a class="btn btn-outline-success btn-lg" href="#2" role="button">North Indian Special</a>
+                <a class="btn btn-outline-success btn-lg" href="#3" role="button">DOSAS AND IDLIS</a>
+                <a class="btn btn-outline-success btn-lg" href="#4" role="button">THALI</a>
+                <a class="btn btn-outline-success btn-lg" href="#5" role="button">STARTERS</a>
+                <a class="btn btn-outline-success btn-lg" href="#6" role="button">CHINESE</a>
+                <a class="btn btn-outline-success btn-lg" href="#7" role="button">DESSERTS & BEVERAGES</a>
+                <a class="btn btn-danger btn-lg" href="#" role="button">PAYMENT</a>
+            </div>
+        </div>
+        <div class="col col-md-10">
+            <div id="1" class="bg-dark text-center text-white" style="font-size: 2em;">Offers</div>
+            <div class="container">
+                <div class="card-deck mx-5 my-3">
+                    <div class="card">
+                        <img class="card-img-top" src="3.jpg">
+                        <div class="card-body">
+                            <h3 class="card-title">Paneer Tikka</h3>
+                            <h4 class="text-danger">20% Off</h4>
+                            <div style="float: right;">
+                                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                    data-trigger="focus" title="Item added to your cart"
+                                    data-content="Check out more items!!">Add
+                                    to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="6.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h3 class="card-title">Raj Kachori</h3>
+                            <h4 class="text-danger">15% Off</h4>
+                            <div style="float: right;">
+                                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                    data-trigger="focus" title="Item added to your cart"
+                                    data-content="Check out more items!!">Add
+                                    to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="2" class="bg-dark text-center text-white" style="font-size: 2em;">North Indian Special</div>
+            <div class="container">
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="5.jpg">
+                    <div class="card-body">
+                        <h3 class="card-title">Chole Bhature</h3>
+                        <h5>₹250</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="shahi-paneer.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Shahi Paneer</h3>
+                        <h5>₹310</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="veg-biryani-mixed-veggies-260nw-1733835488.jpg">
+                    <div class="card-body">
+                        <h3 class="card-title">Veg Biryani</h3>
+                        <h5>₹295</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="dal makhani.jfif" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Daal Makhani</h3>
+                        <h5>₹290</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            </div>
+
+            <div id="3" class="bg-dark text-center text-white" style="font-size: 2em;">Dosas and Idlis</div>
+            <div class="container">
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="mdosa.jpg">
+                    <div class="card-body">
+                        <h3 class="card-title">Masala Dosa</h3>
+                        <h5>₹180</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="pdosa.jfif" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Paneer Dosa</h3>
+                        <h5>₹210</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="2.jfif">
+                    <div class="card-body">
+                        <h3 class="card-title">Idli Sambhar</h3>
+                        <h5>₹150</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="vada.jfif" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Medu Vada</h3>
+                        <h5>₹160</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            </div>
+
+            <div id="4" class="bg-dark text-center text-white" style="font-size: 2em;">Thali</div>
+            <div class="container">
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="1.jpg">
+                    <div class="card-body">
+                        <h3 class="card-title">Executive Thali</h3>
+                        <h5>₹280</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="dthali.jfif" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Deluxe Thali</h3>
+                        <h5>₹310</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+
+
+            <div id="5" class="bg-dark text-center text-white" style="font-size: 2em;">Starters</div>
+            <div class="container">
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="platter.jfif">
+                    <div class="card-body">
+                        <h3 class="card-title">Veg. Platter</h3>
+                        <h5>₹220</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Paneer Tikka</h3>
+                        <h5>₹200</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+            
+
+            <div id="6" class="bg-dark text-center text-white" style="font-size: 2em;">Chinese</div>
+            <div class="container">
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="noodles.jpeg">
+                    <div class="card-body">
+                        <h3 class="card-title">Hakka Noodles</h3>
+                        <h5>₹160</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="chilly.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Chilly Potato</h3>
+                        <h5>₹170</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="momos.jpg">
+                    <div class="card-body">
+                        <h3 class="card-title">Momos</h3>
+                        <h5>₹110</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="veg-manchurian.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Veg. Manchurian</h3>
+                        <h5>₹180</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            </div>
+
+            <div id="7" class="bg-dark text-center text-white" style="font-size: 2em;">Desserts and Beverages</div>
+            <div class="container">
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="jamun.jpg">
+                    <div class="card-body">
+                        <h3 class="card-title">Gulab Jamun</h3>
+                        <h5>₹80</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="4.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Nojito</h3>
+                        <h5>₹70</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card-deck mx-5 my-3">
+                <div class="card">
+                    <img class="card-img-top" src="ice cream.jpg">
+                    <div class="card-body">
+                        <h3 class="card-title">Ice Cream</h3>
+                        <h5>₹90</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="cold-drink.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title">Cold Drink</h3>
+                        <h5>₹50</h5>
+                        <div style="float: right;">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover"
+                                data-trigger="focus" title="Item added to your cart" data-content="Check out more items!!">Add
+                                to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Footer-->
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <button type="button" class="btn btn-primary btn-sm">
+                    <a style="text-decoration: none; color: white;" href="#">Back to Top</a></button>
+            </p>
+            <div style="text-align: center;">Copyright &#169; 2021-2022 MOONLIGHT KITCHENS | All Rights Reserved</div>
+    </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>$('.popover-dismiss').popover({
+            trigger: 'focus'
+        })</script>
+    <script>$(function () {
+            $('[data-toggle="popover"]').popover()
+        })</script>
+</body>
+
+</html>
